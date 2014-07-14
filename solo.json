@@ -1,0 +1,8 @@
+//----------------
+// Taken from http://www.opinionatedprogrammer.com/2011/06/chef-solo-tutorial-managing-a-single-server-with-chef/
+// license http://creativecommons.org/publicdomain/zero/1.0/
+//----------------
+
+{
+    "run_list": [ "recipe[apt]","recipe[install-docker::default]" ]
+}
