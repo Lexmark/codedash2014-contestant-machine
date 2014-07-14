@@ -25,6 +25,37 @@ template 'eclipse.desktop' do
   source   'java-eclipse.desktop'
 end
 
+bash "install eclipse.desktop" do
+  cwd eclipse_java_dir_install_path
+  code <<-EOF
+  	desktop-file-install eclipse.desktop 
+  EOF
+
+end
+
+bash "create symlink" do
+  cwd eclipse_java_dir_install_path
+  code <<-EOF
+  	ln -s #{eclipse_java_dir_install_path}/eclipse /usr/local/bin/eclipse-java
+  EOF
+
+end
+
+bash "copy icon" do
+  cwd eclipse_java_dir_install_path
+  code <<-EOF
+  	cp #{eclipse_java_dir_install_path}/icon.xpm /usr/share/pixmaps/eclipse-java.xpm
+  EOF
+
+end
+
+
+bash "change permissions" do
+cwd "#{domjudge_host_destination_dir}"
+  code <<-EOF  	
+  	chmod 777 -R #{eclipse_java_dir_install_path}/configuration/org.eclipse.osgi  	
+  EOF
+end
 
 
 
