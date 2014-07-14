@@ -51,9 +51,9 @@ end
 
 
 bash "change permissions" do
-cwd "#{domjudge_host_destination_dir}"
+cwd "#{eclipse_java_dir_install_path}/configuration"
   code <<-EOF  	
-  	chmod 777 -R #{eclipse_java_dir_install_path}/configuration/org.eclipse.osgi  	
+  	chmod 777 -R org.eclipse.osgi  	
   EOF
 end
 
