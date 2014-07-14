@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Java - Eclipse 
+Type=Application
+Exec=eclipse
+Terminal=false
+Icon=eclipse
+Comment=Java Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE;Java;
+Name[en]=Eclipse Java
