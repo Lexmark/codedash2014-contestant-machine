@@ -4,5 +4,5 @@
 //----------------
 
 {
-    "run_list": [ "recipe[apt]","recipe[install-docker::default]" ]
+    "run_list": [ "recipe[apt]","recipe[setup-machine::default]","recipe[setup-machine::install-eclipse-java]" ]
 }
