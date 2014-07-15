@@ -14,7 +14,7 @@ end
 bash "untar eclipse" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOF
-  	mkdir #{eclipse_java_dir}
+  	mkdir -p #{eclipse_java_dir}
     tar xvf eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz  -C #{eclipse_java_dir}
   EOF
   not_if { ::File.exists?(eclipse_java_dir_install_path) }

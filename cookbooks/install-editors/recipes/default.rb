@@ -80,10 +80,8 @@ bash "accept license java prerequisites" do
   EOF
 end
 
-bash "install java" do  
-  code <<-EOF
-    sudo apt-get update && sudo apt-get install oracle-java8-installer -y    
-  EOF
+package "oracle-java8-installer" do
+  action :install
 end
 
 bash "update-alternatives java" do  
