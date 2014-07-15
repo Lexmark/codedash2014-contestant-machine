@@ -66,9 +66,12 @@ package "ruby" do
 end
 
 #Install Java
-bash "install java prerequisites" do  
-  code <<-EOF
-    sudo apt-get -y install python-software-properties
+package "python-software-properties" do
+  action :install
+end
+
+bash "add java apt repository" do  
+  code <<-EOF    
     sudo add-apt-repository ppa:webupd8team/java -y
     sudo apt-get update
   EOF
