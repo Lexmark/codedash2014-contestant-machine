@@ -4,5 +4,5 @@
 //----------------
 
 {
-    "run_list": [ "recipe[apt]","recipe[install-languages::default]","recipe[install-editors::install-eclipse-java]" ]
+    "run_list": [ "recipe[apt]","recipe[install-languages::default]","recipe[install-editors::install-eclipse-java]","recipe[install-editors::install-eclipse-cpp]"]
 }
