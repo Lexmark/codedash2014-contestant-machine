@@ -48,15 +48,3 @@ bash "copy icon" do
   EOF
 
 end
-
-
-bash "change permissions" do
-cwd "#{eclipse_java_dir_install_path}/configuration"
-  code <<-EOF  	
-  	chmod 777 -R org.eclipse.osgi  	
-  EOF
-end
-
-
-
-
