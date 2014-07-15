@@ -6,7 +6,7 @@ eclipse_cpp_dir = '/opt/eclipse/cpp'
 eclipse_cpp_dir_install_path = "#{eclipse_cpp_dir}/eclipse"
 
 remote_file "#{Chef::Config[:file_cache_path]}/eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz" do
-  source "http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/R/eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz&mirror_id=346"
+  source "http://ftp.ussg.iu.edu/eclipse/technology/epp/downloads/release/luna/R/eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz"
 
   action :create_if_missing
 end
