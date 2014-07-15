@@ -5,8 +5,8 @@
 eclipse_java_dir = '/opt/eclipse/java'
 eclipse_java_dir_install_path = "#{eclipse_java_dir}/eclipse"
 
-remote_file "http://mirror.cc.columbia.edu/pub/software/eclipse/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz" do
-  source "http://mirror.cc.columbia.edu/pub/software/eclipse/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz"
+remote_file "http://mirrors.xmission.com/eclipse/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz" do
+  source "http://mirrors.xmission.com/eclipse/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz"
 
   action :create_if_missing
 end
