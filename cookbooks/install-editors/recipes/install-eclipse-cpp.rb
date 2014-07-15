@@ -2,11 +2,11 @@
 
 
 #Install Eclipse 4.4 for Java
-eclipse_java_dir = '/opt/eclipse/java'
-eclipse_java_dir_install_path = "#{eclipse_java_dir}/eclipse"
+eclipse_cpp_dir = '/opt/eclipse/cpp'
+eclipse_cpp_dir_install_path = "#{eclipse_cpp_dir}/eclipse"
 
-remote_file "#{Chef::Config[:file_cache_path]}/eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz" do
-  source "http://mirror.cc.columbia.edu/pub/software/eclipse/technology/epp/downloads/release/luna/R/eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz"
+remote_file "#{Chef::Config[:file_cache_path]}/eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz" do
+  source "http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/R/eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz&mirror_id=346"
 
   action :create_if_missing
 end
@@ -14,19 +14,19 @@ end
 bash "untar eclipse" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOF
-  	mkdir -p #{eclipse_java_dir}
-    tar xvf eclipse-standard-luna-R-linux-gtk-x86_64.tar.gz  -C #{eclipse_java_dir}
+  	mkdir -p #{eclipse_cpp_dir}
+    tar xvf eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz  -C #{eclipse_cpp_dir}
   EOF
-  not_if { ::File.exists?(eclipse_java_dir_install_path) }
+  not_if { ::File.exists?(eclipse_cpp_dir_install_path) }
 end
 
 template 'eclipse.desktop' do  
-  path "#{eclipse_java_dir_install_path}/eclipse.desktop"  
-  source   'java-eclipse.desktop'
+  path "#{eclipse_cpp_dir}/eclipse.desktop"  
+  source   'cpp-eclipse.desktop'
 end
 
 bash "install eclipse.desktop" do
-  cwd eclipse_java_dir_install_path
+  cwd eclipse_cpp_dir_install_path
   code <<-EOF
   	desktop-file-install eclipse.desktop 
   EOF
@@ -34,17 +34,17 @@ bash "install eclipse.desktop" do
 end
 
 bash "create symlink" do
-  cwd eclipse_java_dir_install_path
+  cwd eclipse_cpp_dir_install_path
   code <<-EOF
-  	ln -s #{eclipse_java_dir_install_path}/eclipse /usr/local/bin/eclipse-java
+  	ln -s #{eclipse_cpp_dir_install_path}/eclipse /usr/local/bin/eclipse-cpp
   EOF
-  not_if { ::File.exists?('/usr/local/bin/eclipse-java') }
+  not_if { ::File.exists?('/usr/local/bin/eclipse-cpp') }
 end
 
 bash "copy icon" do
-  cwd eclipse_java_dir_install_path
+  cwd eclipse_cpp_dir_install_path
   code <<-EOF
-  	cp #{eclipse_java_dir_install_path}/icon.xpm /usr/share/pixmaps/eclipse-java.xpm
+  	cp #{eclipse_cpp_dir_install_path}/icon.xpm /usr/share/pixmaps/eclipse-cpp.xpm
   EOF
 
 end

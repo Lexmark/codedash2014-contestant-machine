@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Java - Eclipse 
+Name=C/C++ - Eclipse 
 Type=Application
-Exec=eclipse-java
+Exec=eclipse-cpp
 Terminal=false
-Icon=eclipse-java.xpm
-Comment=Java Integrated Development Environment
+Icon=eclipse-cpp.xpm
+Comment=C/C++ Integrated Development Environment
 NoDisplay=false
-Categories=Development;IDE;Java;
-Name[en]=Eclipse Java
+Categories=Development;IDE;C;C++;
+Name[en]=Eclipse C/C++
