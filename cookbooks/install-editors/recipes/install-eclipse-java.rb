@@ -38,7 +38,7 @@ bash "create symlink" do
   code <<-EOF
   	ln -s #{eclipse_java_dir_install_path}/eclipse /usr/local/bin/eclipse-java
   EOF
-
+  not_if { ::File.exists?('/usr/local/bin/eclipse-java') }
 end
 
 bash "copy icon" do
