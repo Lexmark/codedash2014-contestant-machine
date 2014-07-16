@@ -21,14 +21,14 @@ bash "untar eclipse" do
 end
 
 template 'eclipse.desktop' do  
-  path "#{eclipse_cpp_dir_install_path}/eclipse.desktop"  
+  path "#{eclipse_cpp_dir_install_path}/cpp-eclipse.desktop"  
   source   'cpp-eclipse.desktop'
 end
 
 bash "install eclipse.desktop" do
   cwd eclipse_cpp_dir_install_path
   code <<-EOF
-  	desktop-file-install eclipse.desktop 
+  	desktop-file-install cpp-eclipse.desktop 
   EOF
 
 end
