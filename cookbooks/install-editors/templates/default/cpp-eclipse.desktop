@@ -6,5 +6,5 @@ Terminal=false
 Icon=eclipse-cpp.xpm
 Comment=C/C++ Integrated Development Environment
 NoDisplay=false
-Categories=Development;IDE;C;C++;
+Categories=Development;IDE;
 Name[en]=Eclipse C/C++
