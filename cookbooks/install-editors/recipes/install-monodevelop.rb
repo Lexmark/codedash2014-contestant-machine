@@ -6,6 +6,6 @@ bash "add mono develop apt repository" do
 end
 
 #Install monodevelop
-package "monodevelop-current" do
+package "monodevelop" do
   action :install
 end
