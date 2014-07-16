@@ -21,7 +21,7 @@ bash "untar eclipse" do
 end
 
 template 'eclipse.desktop' do  
-  path "#{eclipse_cpp_dir}/eclipse.desktop"  
+  path "#{eclipse_cpp_dir_install_path}/eclipse.desktop"  
   source   'cpp-eclipse.desktop'
 end
 
