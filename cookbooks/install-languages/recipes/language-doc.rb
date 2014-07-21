@@ -18,14 +18,13 @@ end
 bash "unzip java docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		unzip jdk-8u11-apidocs.zip
-		ls
+		unzip jdk-8u11-apidocs.zip		
 	EOF
 end
 
 bash "move java docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		mv jdk-8u11-apidocs #{base_language_doc_dir}
+		mv docs #{base_language_doc_dir}/jdk-8u11-apidocs
 	EOF
 end
