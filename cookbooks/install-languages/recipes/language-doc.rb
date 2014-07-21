@@ -19,6 +19,7 @@ bash "unzip java docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
 		unzip jdk-8u11-apidocs.zip
+		ls
 	EOF
 end
 
