@@ -4,6 +4,6 @@
 =end
 
 root = File.absolute_path(File.dirname(__FILE__))
-
+log_location = root + '/chef-out.log'
 file_cache_path root
 cookbook_path root + '/cookbooks'
