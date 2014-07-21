@@ -22,7 +22,6 @@ bash "unzip java docs" do
 	EOF
 end
 
-
 bash "move java docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
