@@ -5,7 +5,7 @@ base_language_doc_dir = '/home/codedash/Desktop/Language_Docs'
 
 bash "create directory" do  
   code <<-EOF
-  	rm -r #{base_language_doc_dir}
+  	rm -rf #{base_language_doc_dir}
     mkdir -p #{base_language_doc_dir}
     chmod 777 #{base_language_doc_dir}
   EOF
@@ -28,7 +28,7 @@ end
 bash "move java docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		rm -r #{base_language_doc_dir}/jdk-8u11-apidocs/
+		rm -rf #{base_language_doc_dir}/jdk-8u11-apidocs/
 		mv -f docs #{base_language_doc_dir}/jdk-8u11-apidocs
 	EOF
 end
@@ -50,7 +50,7 @@ end
 bash "move scala docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		rm -r #{base_language_doc_dir}/scala-docs-2.9.2/
+		rm -rf #{base_language_doc_dir}/scala-docs-2.9.2/
 		mv -f scala-docs-2.9.2 #{base_language_doc_dir}/scala-docs-2.9.2
 	EOF
 end
@@ -72,7 +72,7 @@ end
 bash "move c++ docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		rm -r #{base_language_doc_dir}/libstdc++-api-html/
+		rm -rf #{base_language_doc_dir}/libstdc++-api-html/
 		mv -f libstdc++-api-html #{base_language_doc_dir}/libstdc++-api-html
 	EOF
 end
@@ -121,7 +121,7 @@ end
 bash "move ruby docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		rm -r #{base_language_doc_dir}/ruby_1_9_3_core/
+		rm -rf #{base_language_doc_dir}/ruby_1_9_3_core/
 		mv -f ruby_1_9_3_core #{base_language_doc_dir}/ruby_1_9_3_core
 	EOF
 end
@@ -143,7 +143,7 @@ end
 bash "move clojure docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		rm -r #{base_language_doc_dir}/clojure-docs/
+		rm -rf #{base_language_doc_dir}/clojure-docs/
 		mv -f gh-pages #{base_language_doc_dir}/clojure-docs
 	EOF
 end
