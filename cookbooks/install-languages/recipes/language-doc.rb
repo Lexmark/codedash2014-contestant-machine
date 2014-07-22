@@ -136,7 +136,7 @@ end
 bash "unzip clojure docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		tunxip -o gh-pages.zip	
+		unzip -o gh-pages.zip	
 	EOF
 end
 
