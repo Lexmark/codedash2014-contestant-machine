@@ -144,6 +144,6 @@ bash "move clojure docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
 		rm -rf #{base_language_doc_dir}/clojure-docs/
-		mv -f gh-pages #{base_language_doc_dir}/clojure-docs
+		mv -f clojure-gh-pages #{base_language_doc_dir}/clojure-docs
 	EOF
 end
