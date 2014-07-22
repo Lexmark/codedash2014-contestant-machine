@@ -5,8 +5,9 @@ base_language_doc_dir = '/home/codedash/Desktop/Language_Docs'
 
 bash "create directory" do  
   code <<-EOF
+  	rm -r #{base_language_doc_dir}
     mkdir -p #{base_language_doc_dir}
-    chmod 777 * -R #{base_language_doc_dir}
+    chmod 777 #{base_language_doc_dir}
   EOF
 end
 
