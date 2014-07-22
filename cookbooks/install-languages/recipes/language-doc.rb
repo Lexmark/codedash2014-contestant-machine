@@ -122,7 +122,7 @@ bash "move ruby docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
 		rm -rf #{base_language_doc_dir}/ruby_1_9_3_core/
-		mv -f ruby_1_9_3_core #{base_language_doc_dir}/ruby_1_9_3_core
+		mv -f ruby_1_9_3_stdlib #{base_language_doc_dir}/ruby_1_9_3_stdlib
 	EOF
 end
 
