@@ -171,7 +171,7 @@ bash "move groovy docs" do
 end
 
 #python https://docs.python.org/2.7/archives/python-2.7.8-docs-html.tar.bz2
-remote_file "#{Chef::Config[:file_cache_path]}/groovy-docs-1.8.9.zip" do
+remote_file "#{Chef::Config[:file_cache_path]}/python-2.7.8-docs-html.tar.bz2" do
   source "https://docs.python.org/2.7/archives/python-2.7.8-docs-html.tar.bz2"
 
   action :create_if_missing
