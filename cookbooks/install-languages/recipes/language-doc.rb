@@ -100,6 +100,7 @@ end
 bash "make monodoc executable" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
+		chmod 777 #{base_language_doc_dir}/monodoc.sh
 		chmod +x #{base_language_doc_dir}/monodoc.sh
 	EOF
 end
