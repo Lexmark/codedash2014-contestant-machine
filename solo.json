@@ -6,6 +6,7 @@
 {
     "run_list": [ 
     	"recipe[apt]",
+    	"recipe[user-setup::default]",
     	"recipe[install-languages::default]",
     	"recipe[install-editors::install-eclipse-java]",
     	"recipe[install-editors::install-eclipse-cpp]",
