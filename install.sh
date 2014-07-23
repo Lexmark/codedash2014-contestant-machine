@@ -22,6 +22,7 @@ if ! test -f "$chef_binary"; then
     # Install Ruby and Chef
     apt-get install -y ruby1.9.1 ruby1.9.1-dev make &&   
     sudo gem1.9.1 install --no-rdoc --no-ri chef --version 11.12.2
+    sudo gem1.9.1 install --no-rdoc --no-ri ruby-shadow
 fi &&
 
 "$chef_binary" -c solo.rb -j solo.json
