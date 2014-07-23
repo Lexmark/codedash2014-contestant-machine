@@ -5,6 +5,6 @@ user "codedash" do
   gid "root"
   home "/home/codedash"
   shell "/bin/bash"
-  password "codedash2014"
+  password "$1$22bgA1YD$JgBUYEoCwqv0lzYowJAtt/"
   action :create 
 end
