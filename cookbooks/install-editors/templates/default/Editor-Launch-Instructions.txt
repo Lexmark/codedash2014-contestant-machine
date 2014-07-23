@@ -1,0 +1,66 @@
+#Opening Eclipse for Java
+1. Open a terminal (press Ctrl + Alt + T)
+2. Type eclipse-java
+3. Hit enter
+
+OR
+
+1. Click the unity launcher icon
+2. Search for eclipse-java
+3. Click on the "Eclipse Java" icon.
+
+#Opening Eclipse for C/C++
+1. Open a terminal (press Ctrl + Alt + T)
+2. Type eclipse-cpp
+3. Hit enter
+
+OR
+
+1. Click the unity launcher icon
+2. Search for eclipse-cpp
+3. Click on the "Eclipse C/C++" icon.
+
+#Opening Emacs
+1. Open a terminal (press Ctrl + Alt + T)
+2. Type emacs
+3. Hit enter
+
+OR
+
+1. Click the unity launcher icon
+2. Search for emacs
+3. Click on the "Emacs" icon.
+
+#Opening MonoDevelop
+1. Open a terminal (press Ctrl + Alt + T)
+2. Type monodevelop
+3. Hit enter
+
+OR
+
+1. Click the unity launcher icon
+2. Search for Monodevelop
+3. Click on the "MonoDevelop" icon.
+
+#Opening Sublime Text
+1. Open a terminal (press Ctrl + Alt + T)
+2. Type subl
+3. Hit enter
+
+OR
+
+1. Click the unity launcher icon
+2. Search for Sublime Text
+3. Click on the "Sublime Text" icon.
+
+#Opening Vim
+1. Open a terminal (press Ctrl + Alt + T)
+2. Type vim
+3. Hit enter
+
+OR
+
+1. Open a terminal (press Ctrl + Alt + T)
+2. Type gvim
+3. Hit enter
+
