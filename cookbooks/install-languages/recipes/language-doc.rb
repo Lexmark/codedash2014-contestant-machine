@@ -147,3 +147,25 @@ bash "move clojure docs" do
 		mv -f clojure-gh-pages #{base_language_doc_dir}/clojure-docs
 	EOF
 end
+
+#groovy http://dist.groovy.codehaus.org/distributions/groovy-docs-1.8.9.zip
+remote_file "#{Chef::Config[:file_cache_path]}/groovy-docs-1.8.9.zip" do
+  source "http://dist.groovy.codehaus.org/distributions/groovy-docs-1.8.9.zip"
+
+  action :create_if_missing
+end
+
+bash "unzip groovy docs" do
+	cwd Chef::Config[:file_cache_path]
+	code <<-EOF
+		unzip -o groovy-docs-1.8.9.zip	
+	EOF
+end
+
+bash "move groovy docs" do
+	cwd Chef::Config[:file_cache_path]
+	code <<-EOF
+		rm -rf #{base_language_doc_dir}/groovy-docs-1.8.9/
+		mv -f groovy-1.8.9 #{base_language_doc_dir}/groovy-docs-1.8.9
+	EOF
+end
