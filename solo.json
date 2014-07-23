@@ -13,6 +13,7 @@
     	"recipe[install-editors::install-emacs]",
     	"recipe[install-editors::install-sublimetext]",
     	"recipe[install-editors::install-monodevelop]",
-    	"recipe[install-languages::language-doc]"
+    	"recipe[install-languages::language-doc]",
+    	"recipe[install-editors::install-launch-instructions]"
     	]
 }
