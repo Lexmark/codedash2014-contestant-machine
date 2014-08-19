@@ -33,9 +33,9 @@ bash "move java docs" do
 	EOF
 end
 
-# Get Scala Docs http://www.scala-lang.org/files/archive/scala-docs-2.9.2.zip
-remote_file "#{Chef::Config[:file_cache_path]}/scala-docs-2.9.2.zip" do
-  source "http://www.scala-lang.org/files/archive/scala-docs-2.9.2.zip"
+# Get Scala Docs http://www.scala-lang.org/files/archive/scala-docs-2.11.2.zip
+remote_file "#{Chef::Config[:file_cache_path]}/scala-docs-2.11.2.zip" do
+  source "http://www.scala-lang.org/files/archive/scala-docs-2.11.2.zip"
 
   action :create_if_missing
 end
@@ -43,15 +43,15 @@ end
 bash "unzip scala docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		unzip -o scala-docs-2.9.2.zip		
+		unzip -o scala-docs-2.11.2.zip		
 	EOF
 end
 
 bash "move scala docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		rm -rf #{base_language_doc_dir}/scala-docs-2.9.2/
-		mv -f scala-docs-2.9.2 #{base_language_doc_dir}/scala-docs-2.9.2
+		rm -rf #{base_language_doc_dir}/scala-docs-2.11.2/
+		mv -f scala-docs-2.9.2 #{base_language_doc_dir}/scala-docs-2.11.2
 	EOF
 end
 
