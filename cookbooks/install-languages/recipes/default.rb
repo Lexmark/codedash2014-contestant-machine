@@ -98,8 +98,25 @@ package "leiningen" do
 end
 
 #Install scala
-package "scala" do
-  action :install
+scala_deb="scala-2.11.2.deb"
+remote_file "#{Chef::Config[:file_cache_path]}/#{scala_deb}" do
+  source "http://www.scala-lang.org/files/archive/#{scala_deb}"
+  action :create_if_missing
+end
+
+bash "remove scala" do
+  cwd Chef::Config[:file_cache_path]
+  code <<-EOF
+    apt-get remove scala-library scala -y
+  EOF
+end
+
+bash "unpack scala" do
+  cwd Chef::Config[:file_cache_path]
+  code <<-EOF
+    dpkg -i #{scala_deb}
+    apt-get update
+  EOF
 end
 
 #Install groovy
