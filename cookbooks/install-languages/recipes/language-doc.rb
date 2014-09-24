@@ -51,7 +51,7 @@ bash "move scala docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
 		rm -rf #{base_language_doc_dir}/scala-docs-2.11.2/
-		mv -f scala-docs-2.9.2 #{base_language_doc_dir}/scala-docs-2.11.2
+		mv -f scala-docs-2.11.2 #{base_language_doc_dir}/scala-docs-2.11.2
 	EOF
 end
 
@@ -171,9 +171,9 @@ bash "move groovy docs" do
 	EOF
 end
 
-#python https://docs.python.org/2.7/archives/python-2.7.8-docs-html.tar.bz2
-remote_file "#{Chef::Config[:file_cache_path]}/python-2.7.8-docs-html.tar.bz2" do
-  source "https://docs.python.org/2.7/archives/python-2.7.8-docs-html.tar.bz2"
+#python https://docs.python.org/3/archives/python-3.4.0-docs-html.tar.bz2
+remote_file "#{Chef::Config[:file_cache_path]}/python-3.4.0-docs-html.tar.bz2" do
+  source "https://docs.python.org/3/archives/python-3.4.0-docs-html.tar.bz2"
 
   action :create_if_missing
 end
@@ -181,14 +181,14 @@ end
 bash "untar python docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		tar -xvf python-2.7.8-docs-html.tar.bz2	
+		tar -xvf python-3.4.0-docs-html.tar.bz2	
 	EOF
 end
 
 bash "move python docs" do
 	cwd Chef::Config[:file_cache_path]
 	code <<-EOF
-		rm -rf #{base_language_doc_dir}/python-2.7.8-docs-html/
-		mv -f python-2.7.8-docs-html #{base_language_doc_dir}/python-2.7.8-docs-html
+		rm -rf #{base_language_doc_dir}/python-3.4.0-docs-html/
+		mv -f python-3.4.0-docs-html #{base_language_doc_dir}/python-3.4.0-docs-html
 	EOF
 end
